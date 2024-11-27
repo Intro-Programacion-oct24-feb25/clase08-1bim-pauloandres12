@@ -32,10 +32,20 @@ public class Ejemplo09 {
         int suma = 0;
         int contador_calificaciones = 0;
         
+        
         cadenaFinal = "Listado de Notas\n";
         
         do {
-            
+            System.out.println("Ingrese la nota");
+            nota = entrada.nextInt();
+            System.out.println("Ingrese el nombre");
+            entrada.nextLine();
+            nombre = entrada.nextLine();
+            cadenaFinal = String.format("%sCalificacion: %d "
+                    + "del estudiante %s\n",
+                    cadenaFinal,
+                    nota,
+                    nombre);
             
             // agrego valor al acumulador
             suma = suma + nota;
@@ -59,9 +69,11 @@ public class Ejemplo09 {
         
         // promedio = suma / contador_calificaciones;
         promedio = (double)suma / contador_calificaciones;
-        cadenaFinal = String.format("%s\nPromedio de calificaciones: %.2f",
+        
+        cadenaFinal = String.format("%s\n\nPromedio de calificaciones: %.2f",
                 cadenaFinal,
                 promedio);
+
         System.out.printf("%s\n", cadenaFinal);
     }
 }
