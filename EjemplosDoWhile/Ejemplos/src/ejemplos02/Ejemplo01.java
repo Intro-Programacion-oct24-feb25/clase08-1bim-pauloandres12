@@ -25,10 +25,11 @@ public class Ejemplo01 {
         int suma;
         suma = 0;
         do {
+            System.out.printf("%d\n", contador);
             suma = suma + contador;
             contador = contador + 1;
         } while (contador <= 10); 
-        System.out.printf("%d\n", suma);
+        System.out.printf("\n%d\n", suma);
     }
 
 }
